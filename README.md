@@ -13,18 +13,21 @@ Since Whisper requires 30-second audio inputs, we segmented all audio files into
 The models folder includes implementations of both LogNCDEs and baseline models, with complete hyperparameter configurations documented in models/param.
 ## **Environment Specifications** ##
 ### **Hardware Configuration** ###
-#### **CPU** ####：
-Intel Xeon Gold 6326 (32-core @ 2.90GHz)
-#### **GPU** ####：
-NVIDIA A100 80GB PCIe
+**CPU**:Intel Xeon Gold 6326 (32-core @ 2.90GHz)
+
+**GPU**:NVIDIA A100 80GB PCIe
 ### **Software Environment** ###
 | Component       | Version       |
 |-----------------|---------------
 | Python          | 3.10.15       | 
 | JAX             | 0.4.34        | 
 | PyTorch         | 2.5.0         | 
-| Toolchain       | Version       |
 | CUDA Toolkit    | 12.1          |
 | cuDNN           | 9.1.0         |
+| NVIDIA Driver   | 535.216.01    |
+| diffrax         | 0.6.0         |
+| equinox         | 0.11.8        |
+
+
 
 
