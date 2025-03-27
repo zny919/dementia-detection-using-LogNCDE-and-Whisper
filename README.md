@@ -8,5 +8,9 @@ Our experiments were conducted using three publicly available datasets: ADReSS, 
 | ADReSSo       | 122       | 115         | 237   |
 | DementiaBank  | 222        | 255        | 477   |
 
-
-*Note: HC = Healthy Controls, AD = Alzheimer's Dementia*
+Since Whisper requires 30-second audio inputs, we segmented all audio files into 30-second segments (see data/audio_cut for details). Additionally, as Whisper's output contains up to 768 channels, we employed an autoencoder to reduce the dimensionality to 32 for improved model efficiency ((see data/autoencoder for details).
+## **Models**
+The models folder includes implementations of both LogNCDEs and baseline models, with complete hyperparameter configurations documented in models/param.
+## **Environment Specifications** ##
+### **Hardware Configuration** ###
+#### **CPU** ####
