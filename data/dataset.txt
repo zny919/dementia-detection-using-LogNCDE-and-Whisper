@@ -1,6 +1,9 @@
 LogNCDEs hyperparameter:
-
-hidden_dim = 128
+num_steps=415,   
+batch_size=32, 
+base_lr=3.5e-4, 
+warmup_steps = 84,
+hidden_dim = 128,
 data_dim = 33
 label_dim = 1
 vf_hidden_dim = 512
@@ -8,5 +11,6 @@ vf_num_hidden = 3
 ode_solver_stepsize = 1 / 250
 stepsize = 60
 num_seeds = 5
-seeds=(1001,1002……1050)
+seeds=[1001,1002……1050]
+
 
