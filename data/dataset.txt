@@ -1,7 +1,8 @@
 LogNCDEs hyperparameter: 
 batch_size=32, 
+epoch_num=10,
 lr=3.5e-4, 
-warmup_steps = 2*epoch,
+warmup_steps = 2*epoch_size,
 hidden_dim = 128,
 vf_hidden_dim = 512
 vf_num_hidden = 3
@@ -14,8 +15,9 @@ scale=1000
 
 LRU hyperparameter:
 batch_size=32, 
+epoch_num=10,
 lr=3.5e-4, 
-warmup_steps = 2*epoch,
+warmup_steps = 2*epoch_size,
 hidden_dim = 128
 vf_hidden_dim = 512
 vf_num_hidden = 3
