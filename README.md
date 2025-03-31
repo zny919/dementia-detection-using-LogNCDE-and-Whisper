@@ -31,6 +31,9 @@ The evaluation of the model uses metrics such as accuracy, F1-score, precision, 
 | diffrax         | 0.6.0         |
 | equinox         | 0.11.8        |
 
+## **Result** ##
+The "result" folder contains the reported results from the paper as well as the detailed results for each seed used in the experiments.
+
 
 
 
