@@ -11,7 +11,8 @@ Our experiments were conducted using four publicly available datasets: ADReSS, A
 
 Since Whisper requires 30-second audio inputs, we segmented all audio files into 30-second segments (see data/audio_cut for details). Additionally, as Whisper's output contains up to 768 channels, we employed an autoencoder to reduce the dimensionality to 32(NCMMSC is 64) for improved model efficiency ((see data/autoencoder for details).
 ## **Models**
-The models folder includes implementations of both LogNCDEs and baseline models, with complete hyperparameter configurations documented in models/hyperparameter.
+The models folder includes implementations of both LogNCDEs and baseline models, with complete hyperparameter configurations documented in models/hyperparameter. Since the audio is first split into short segments for prediction and then the segment-level results are aggregated back to the original recording, our model produces outputs under two aggregation strategies. The first takes the mean of the segment-level prediction scores and assigns label 1 if this mean exceeds 0.5. The second counts how many segments have prediction scores greater than 0.5 and assigns label 1 if this count exceeds half of the total number of segments for that recording. In our paper, we report results based on the latter strategy, which is recorded in the code using the fields “acc_vote” and “F1_vote”.
+
 
 ## **Environment Specifications** ##
 ### **Hardware Configuration** ###
