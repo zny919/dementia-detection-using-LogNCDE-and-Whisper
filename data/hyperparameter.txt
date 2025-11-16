@@ -4,14 +4,25 @@ epoch_num=10,
 lr=3.5e-4, 
 warmup_steps = 2*epoch_size,
 hidden_dim = 128,
+data_dim = 33,  #In particular, NCMMCS dataset is 65
+label_dim = 1,
 vf_hidden_dim = 512
 vf_num_hidden = 3
 ode_solver_stepsize = 1 / 250
 stepsize = 60
 num_seeds = 5
-seeds=[1001,1002……1050]
+seeds=[1001,1002,1003,1004,1005]
 cosine annealing=(lr,0.01*lr) #(initial Learning Rate,the minimum learning rate reached at the end of a cycle)
 scale=1000
+
+autoencoder hyperparameter:
+set_seed=400
+epochs=80, 
+lr=0.001, 
+batch_size=16,
+kernel_size=3, 
+padding=1，
+Conv1D channels：input_dim → 128 → latent_dim=32  #In particular,NCMMSC dataset is input_dim → 256 → latent_dim=64
 
 LRU hyperparameter:
 batch_size=32, 
@@ -25,5 +36,5 @@ ode_solver_stepsize = 1 / 500
 stepsize = 15
 num_blocks=6
 ssm_dim=256
-seeds = [1001,1002……1050]
-cosine annealing(lr,0.01*lr) #(initial Learning Rate,the minimum learning rate reached at the end of a cycle)
+seeds=[1001,1002,1003,1004,1005]
+cosine annealing(lr,0.01*lr) 
