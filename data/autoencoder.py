@@ -37,10 +37,10 @@ def preprocess_data(features: torch.Tensor) -> torch.Tensor:
     standardized = (features - mean) / (std + 1e-8)
     return standardized
 
-
-# Example: uncomment if you want to standardize
-# features1 = preprocess_data(features1)
-# features2 = preprocess_data(features2)
+''' ADReSSo and NCMMSC datasets use this codes
+ features1 = preprocess_data(features1)
+ features2 = preprocess_data(features2)
+'''
 
 # Inspect global statistics
 train_features_np = features1.numpy()
