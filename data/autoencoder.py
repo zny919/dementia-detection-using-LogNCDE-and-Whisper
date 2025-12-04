@@ -32,8 +32,8 @@ set_seed(400)
 
 def preprocess_data(features: torch.Tensor) -> torch.Tensor:
     """Standardize features along the last dimension."""
-    mean = features.mean(axis=2, keepdims=True)
-    std = features.std(axis=2, keepdims=True)
+    mean = features.mean(axis=1, keepdims=True)
+    std = features.std(axis=1, keepdims=True)
     standardized = (features - mean) / (std + 1e-8)
     return standardized
 
